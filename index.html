@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptado de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header class="header">
+        <img class="header-logo" src="./assets/Logo.png" alt="logo alura">
+    </header>
+    <main>
+        <div>
+            <img class="main-logo" src="./assets/Logo-2.png" alt="logo alura">
+        </div>
+        <section class="seccion-input">
+            <div class="div-text-input">
+                <textarea id="areaTextoUsuario" class="input-text" placeholder="Ingrese el texto aqui"  onchange="textoIngresado(this.value)"></textarea>
+            </div>
+            <div class="div-texto-instrucciones">
+                <img class="icono-error" src="./assets/error.png" alt="icono de error">
+                <p class="texto-instrucciones">Solo letras minusculas y sin acentos.</p>
+            </div>
+            <div class="div-botones-input">
+                <button id="botoEncriptar" class="boton-encriptar" onclick="encriptarTexto()" disabled>Encriptar</button>
+                <button id="botonDesencriptar" class="boton-desencriptar"  onclick="desencriptarTexto()" disabled>Desencriptar</button>
+            </div>
+        </section>
+        <section class="seccion-resultado">
+            <div class="div-imagen-muneco">
+                <img id="imagen-muneco" src="./assets/Muñeco.png" alt="imagen de muñeco buscando">
+            </div>
+            <div class="div-texto-resultado">
+                <p id="texto-resultado" class="texto-resultado">Ningun mensaje fue encontrado.</p>
+                <p id="texto-instrucciones-resultado" class="texto-instrucciones-resultado">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="boton-copiar" class="boton-copiar-resultado" onclick="copiarTexto()" hidden>Copiar</button>
+            </div>
+        </section>
+    </main>
+    <!-- <footer></footer> -->
+    <script src="app.js"></script>
+</body>
+</html>
